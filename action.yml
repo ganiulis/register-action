@@ -1,5 +1,5 @@
 name: Register image
-description: Build and register a production-ready image from a Dockerfile to a private registry
+description: Build and register a production-ready image from a Dockerfile to a private registry.
 branding:
   icon: box
   color: blue
