@@ -19,7 +19,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: ganiulis/register-action@v0.1.0
+      - uses: ganiulis/register-action@0.1.0
         with:
           image: php
           password: ${{ github.token }}
