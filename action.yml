@@ -11,20 +11,17 @@ inputs:
     description: Image name
     required: true
     type: string
-  version:
-    description: Image version
-    required: true
-    type: string
-  password:
-    description: GitHub token
-    required: true
-    type: string
   registry:
     description: Host registry
     required: false
     type: string
     default: ghcr.io
-  platforms:
+  build-target:
+    description: Build target of the Dockerfile
+    required: false
+    type: string
+    default: production
+  platform:
     description: Specify which platform to build the image for
     required: false
     type: string
@@ -33,7 +30,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Check out into the repository
+    - name: Check out into this repository
       uses: actions/checkout@v4
 
     - name: Log into the host registry
@@ -41,7 +38,7 @@ runs:
       with:
         registry: ${{ inputs.registry }}
         username: ${{ github.actor }}          
-        password: ${{ inputs.password }}
+        password: ${{ github.token }}
 
     - name: Extract metadata (tags, labels) for Docker
       uses: docker/metadata-action@v5
@@ -60,10 +57,10 @@ runs:
       with:
         push: true
         context: .
-        target: production
-        platforms: ${{ inputs.platforms }}
+        target: ${{ inputs.build-target }}
+        platforms: ${{ inputs.platform }}
         tags: |
           ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:latest
-          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ inputs.version }}
+          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ github.sha }}
         labels: ${{ steps.meta.outputs.labels }}
         provenance: false
