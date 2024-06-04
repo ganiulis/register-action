@@ -2,12 +2,13 @@
 
 ## Requirements
 
-- A `Dockerfile` with a `production` build target at the root of the project.
+- A `Dockerfile`.
+- A build target (either a `production` default or specified with `build-target`).
 
 ## Example
 
 ```yaml
-name: Registry
+name: Register
 
 on:
   workflow_dispatch:
@@ -21,9 +22,9 @@ jobs:
     steps:
       - uses: ganiulis/register-action@0.1.0
         with:
-          image: php
+          image: my-api
           password: ${{ github.token }}
-          version: 2024.05.25.${{ github.sha }}
+          version: ${{ github.sha }}
 ```
 
 ## Notes
