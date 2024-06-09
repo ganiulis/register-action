@@ -12,6 +12,12 @@ name: Register
 
 on:
   workflow_dispatch:
+    inputs:
+      ref:
+        required: true
+        type: string
+        description: Branch, tag, or SHA
+        default: main
 
 jobs:
   register:
@@ -22,9 +28,8 @@ jobs:
     steps:
       - uses: ganiulis/register-action@0.1.0
         with:
+          ref: ${{ inputs.ref }}
           image: my-api
-          password: ${{ github.token }}
-          version: ${{ github.sha }}
 ```
 
 ## Notes

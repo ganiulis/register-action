@@ -68,6 +68,6 @@ runs:
         platforms: ${{ inputs.platform }}
         tags: |
           ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:latest
-          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ github.sha }}
+          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ inputs.ref }}
         labels: ${{ steps.meta.outputs.labels }}
         provenance: false
