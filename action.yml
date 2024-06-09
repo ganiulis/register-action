@@ -7,6 +7,11 @@ branding:
   color: blue
 
 inputs:
+  ref:
+    description: The branch, tag, or SHA of the repository
+    required: false
+    type: string
+    default: ''
   image:
     description: Image name
     required: true
@@ -32,7 +37,9 @@ runs:
   steps:
     - name: Check out into this repository
       uses: actions/checkout@v4
-
+      with:
+        ref: ${{ inputs.ref }}
+    
     - name: Log into the host registry
       uses: docker/login-action@v3
       with:
