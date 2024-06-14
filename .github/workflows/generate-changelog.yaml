@@ -1,0 +1,12 @@
+name: Changelog
+
+on:
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate CHANGELOG.md
+        uses: heinrichreimer/action-github-changelog-generator@v2.3
+        with:
+          token: ${{ github.token }} 

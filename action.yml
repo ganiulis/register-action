@@ -71,8 +71,3 @@ runs:
           ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ inputs.ref }}
         labels: ${{ steps.meta.outputs.labels }}
         provenance: false
-
-    - name: Generate CHANGELOG.md
-      uses: heinrichreimer/action-github-changelog-generator@v2.3
-      with:
-        token: ${{ github.token }} 
