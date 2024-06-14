@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/ganiulis/register-action/tree/HEAD)
+## [0.2.1](https://github.com/ganiulis/register-action/tree/0.2.1) (2024-06-14)
 
-[Full Changelog](https://github.com/ganiulis/register-action/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/ganiulis/register-action/compare/0.2.0...0.2.1)
 
 **Implemented enhancements:**
 
