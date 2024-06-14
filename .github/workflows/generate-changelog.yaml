@@ -1,6 +1,7 @@
 name: Changelog
 
 on:
+  push:
 
 jobs:
   generate:
