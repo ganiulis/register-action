@@ -10,6 +10,8 @@
 ```yaml
 name: Register
 
+run-name: Register (${{ inputs.ref }})
+
 on:
   workflow_dispatch:
     inputs:
