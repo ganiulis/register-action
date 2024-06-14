@@ -28,7 +28,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: ganiulis/register-action@0.1.0
+      - uses: ganiulis/register-action@0.1.1
         with:
           ref: ${{ inputs.ref }}
           image: my-app
