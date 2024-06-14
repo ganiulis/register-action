@@ -31,7 +31,7 @@ jobs:
       - uses: ganiulis/register-action@0.1.0
         with:
           ref: ${{ inputs.ref }}
-          image: my-api
+          image: my-app
 ```
 
 ## Notes
