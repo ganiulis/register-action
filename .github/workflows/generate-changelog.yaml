@@ -3,7 +3,7 @@ name: Changelog
 on:
 
 jobs:
-  changelog:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - name: Generate CHANGELOG.md
