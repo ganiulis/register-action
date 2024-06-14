@@ -3,7 +3,6 @@ name: Generate CHANGELOG.md
 run-name: Generate CHANGELOG.md (${{ github.sha }})
 
 on:
-  workflow_dispatch:
   push:
     tags:
 
