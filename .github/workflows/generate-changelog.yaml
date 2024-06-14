@@ -4,8 +4,6 @@ run-name: Generate CHANGELOG.md (${{ github.sha }})
 
 on:
   push:
-    branches:
-      - main
     tags:
 
 permissions:
