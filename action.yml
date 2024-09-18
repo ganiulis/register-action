@@ -51,7 +51,7 @@ runs:
       uses: docker/metadata-action@v5
       id: meta
       with:
-        images: ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}
+        images: ${{ inputs.registry }}/${{ inputs.image }}
 
     - name: Install QEMU static binaries
       uses: docker/setup-qemu-action@v3
