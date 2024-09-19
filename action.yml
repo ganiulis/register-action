@@ -67,7 +67,7 @@ runs:
         target: ${{ inputs.build-target }}
         platforms: ${{ inputs.platform }}
         tags: |
-          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:latest
-          ${{ inputs.registry }}/${{ github.repository }}/${{ inputs.image }}:${{ inputs.ref }}
+          ${{ inputs.registry }}/${{ inputs.image }}:latest
+          ${{ inputs.registry }}/${{ inputs.image }}:${{ inputs.ref }}
         labels: ${{ steps.meta.outputs.labels }}
         provenance: false
