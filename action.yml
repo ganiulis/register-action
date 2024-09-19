@@ -51,7 +51,7 @@ runs:
       uses: docker/metadata-action@v5
       id: meta
       with:
-        images: ${{ inputs.registry }}/${{ inputs.image }}
+        images: ${{ inputs.registry }}/${{ github.repository_owner }}/${{ inputs.image }}
 
     - name: Install QEMU static binaries
       uses: docker/setup-qemu-action@v3
@@ -67,7 +67,7 @@ runs:
         target: ${{ inputs.build-target }}
         platforms: ${{ inputs.platform }}
         tags: |
-          ${{ inputs.registry }}/${{ inputs.image }}:latest
-          ${{ inputs.registry }}/${{ inputs.image }}:${{ inputs.ref }}
+          ${{ inputs.registry }}/${{ github.repository_owner }}/${{ inputs.image }}:latest
+          ${{ inputs.registry }}/${{ github.repository_owner }}/${{ inputs.image }}:${{ inputs.ref }}
         labels: ${{ steps.meta.outputs.labels }}
         provenance: false
