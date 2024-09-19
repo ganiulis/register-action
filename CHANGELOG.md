@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.3](https://github.com/ganiulis/register-action/tree/0.2.3) (2024-09-19)
+
+[Full Changelog](https://github.com/ganiulis/register-action/compare/0.2.2...0.2.3)
+
 ## [0.2.2](https://github.com/ganiulis/register-action/tree/0.2.2) (2024-09-18)
 
 [Full Changelog](https://github.com/ganiulis/register-action/compare/0.2.1...0.2.2)
